@@ -21,17 +21,5 @@ spec:
         - containerPort: 3000
       imagePullSecrets:
       - name: regcred
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nodejs-service
-spec:
-  selector:
-    app: nodejs
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalancer
+
 
